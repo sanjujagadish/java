@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/quantum_grey200"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    tools:context=".homescreen.business.businesslist.BusinessListFragment" >
+
+    <include layout="@layout/layout_appboard"
+        android:id="@+id/apptoolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0dp"
+        android:id="@+id/rv_businesslist"
+        app:layout_constraintTop_toBottomOf="@id/apptoolbar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:layout_width="@dimen/margin_40dp"
+        android:layout_height="@dimen/margin_40dp"
+        android:id="@+id/fab_addbusiness"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/fab_add"
+        app:fabSize="mini"
+        android:layout_margin="@dimen/margin_20dp"
+        app:fab_colorNormal="@color/colorPrimary" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

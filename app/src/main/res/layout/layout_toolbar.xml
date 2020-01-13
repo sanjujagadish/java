@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:elevation="@dimen/margin_2dp"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            app:popupTheme="@style/AppTheme.NoActionBar" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="@+id/logo"
+                app:layout_constraintStart_toEndOf="@+id/logo" >
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:src="@drawable/tagslogo"
+                    android:paddingLeft="-10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/shop_status"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/shop_status"
+                    android:layout_width="@dimen/margin_0dp"
+                    android:layout_height="match_parent"
+                    android:paddingRight="@dimen/margin_16dp"
+                    android:showText="true"
+                    android:switchTextAppearance="@style/TextStyle"
+                    android:textOff="off"
+                    android:textOn="on"
+                    android:thumb="@drawable/customswitchselector"
+                    android:track="@drawable/custom_track"
+                    app:layout_constraintLeft_toRightOf="@id/logo"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

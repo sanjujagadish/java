@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homescreen.completedlist.CompletedListFragment">
+
+    <include layout="@layout/layout_appboard"
+    android:id="@+id/appbarlt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarlt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/rv_completedlist" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

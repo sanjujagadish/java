@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/btmnavigation_home"
+        android:icon="@drawable/btm_navqrcode"
+        android:enabled="true"
+        android:title="Qr Code" />
+
+    <item
+        android:id="@+id/btmnavigation_completed"
+        android:icon="@drawable/btm_navenquiry"
+        android:enabled="true"
+        android:title="Completed" />
+
+    <item
+        android:id="@+id/btmnavigation_business"
+        android:icon="@drawable/ic_business_black_24dp"
+        android:enabled="true"
+        android:title="Business Pro" />
+
+    <item
+        android:id="@+id/btmnavigation_menu"
+        android:icon="@drawable/btm_navperson"
+        android:enabled="true"
+        android:title="Account" />
+
+</menu>

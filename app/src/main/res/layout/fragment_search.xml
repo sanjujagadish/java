@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/quantum_grey50"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/toolbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/margin_40dp"
+            android:layout_height="@dimen/margin_50dp"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_5dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_toLeftOf="@+id/ivClose"
+            android:id="@+id/searchEditText"
+            android:background="@null"
+            android:paddingLeft="@dimen/margin_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/quantum_grey800"
+            android:gravity="center_vertical"
+            android:hint="Search here"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/margin_35dp"
+            android:layout_height="@dimen/margin_35dp"
+            android:layout_toLeftOf="@+id/ivfilter"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_5dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+
+        <ImageView
+            android:id="@+id/ivfilter"
+            android:layout_width="@dimen/margin_35dp"
+            android:layout_height="@dimen/margin_35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            app:srcCompat="@drawable/ic_filter" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_below="@+id/toolbar_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/margin_10dp"
+        android:horizontalSpacing="@dimen/margin_10dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalScrollbarPosition="right"
+        android:scrollbars="vertical" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoCar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dimen_4dp"
+        android:padding="@dimen/margin_10dp"
+        android:textColor="@color/quantum_grey800"
+        android:textSize="@dimen/textsize_12sp"
+        android:text="No cars available"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_close_black_24dp" />
+
+</RelativeLayout>

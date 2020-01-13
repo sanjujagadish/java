@@ -1,0 +1,102 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+    <style name="AppNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ScanQRCodeTranslucentView">
+        <item name="android:background">#BF000000</item>
+    </style>
+
+    <style name="table_row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/margin_2dp</item>
+        <item name="android:showDividers">beginning|middle|end</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog"></style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textSize">@dimen/textsize_13sp</item>
+        <item name="android:textColorHint">@color/quantum_grey600</item>
+        <item name="android:textColor">@color/quantum_grey800</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="EditTextStyles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textSize">@dimen/textsize_14sp</item>
+        <item name="android:textColorHint">@color/quantum_grey700</item>
+        <item name="android:textColor">@color/quantum_grey700</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation" tools:targetApi="lollipop">10dp</item>
+        <item name="android:textSize">@dimen/textsize_16sp</item>
+        <item name="android:background">@drawable/rectangle_shape_blue</item>
+        <item name="android:layout_marginLeft">@dimen/margin_40dp</item>
+        <item name="android:layout_marginRight">@dimen/margin_40dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:textSize">@dimen/textsize_10sp</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="SwitchStyles" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorSwitchThumbNormal">@color/quantum_grey100</item>
+        <item name="android:colorForeground">@color/quantum_grey100</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/quantum_grey700</item>
+        <item name="colorControlActivated">@color/quantum_yellow700</item>
+    </style>
+
+    <style name="HeaderTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/textsize_16sp</item>
+        <item name="android:textColor">@color/quantum_grey900</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

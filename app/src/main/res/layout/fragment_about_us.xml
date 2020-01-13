@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".navigationview.aboutus.AboutUsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_40dp">
+
+            <ImageView
+                android:layout_width="@dimen/margin_200dp"
+                android:layout_height="@dimen/margin_50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/logo"
+                android:src="@drawable/tagslogo"
+                android:layout_marginLeft="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_20dp" />
+
+            <TextView
+                android:layout_width="@dimen/margin_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/margin_12dp"
+                app:layout_constraintEnd_toEndOf="@id/logo"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                android:id="@+id/partner"
+                android:textStyle="bold"
+                android:text="Partner"
+                android:textColor="@color/quantum_pink400"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="start"
+                android:maxLines="4"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                android:textSize="@dimen/textsize_12sp"
+                android:id="@+id/tv_shortdescription"
+                android:textColor="@color/quantum_grey700"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="start"
+                app:layout_constraintTop_toBottomOf="@id/img_about"
+                android:textSize="@dimen/textsize_16sp"
+                android:id="@+id/label1"
+                android:textColor="@color/quantum_grey800"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/label1"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp"
+                android:text=""
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:textColor="@color/quantum_grey600"
+                android:textSize="@dimen/textsize_12sp"
+                android:id="@+id/tv_aboutus"/>
+
+            <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/margin_120dp"-->
+            <!--android:id="@+id/rv_banner"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/tv_shortdescription"-->
+            <!--android:layout_marginTop="@dimen/margin_15dp"-->
+            <!--android:paddingLeft="@dimen/margin_10dp"-->
+            <!--android:paddingRight="@dimen/margin_10dp"-->
+            <!--android:layout_marginBottom="@dimen/margin_10dp" />-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_120dp"
+                android:id="@+id/img_about"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/aboutus"
+                app:layout_constraintTop_toBottomOf="@id/tv_shortdescription"/>
+
+            <include layout="@layout/item_about"
+                android:layout_height="@dimen/margin_150dp"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/item"
+                app:layout_constraintTop_toBottomOf="@id/tv_aboutus"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recognition"
+                android:id="@+id/recognition"
+                app:layout_constraintTop_toBottomOf="@+id/item"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:textColor="@color/quantum_grey800"
+                android:textSize="@dimen/textsize_16sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_recognition"
+                android:paddingLeft="@dimen/margin_16dp"
+                android:paddingRight="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:textColor="@color/quantum_grey600"
+                android:textSize="@dimen/textsize_12sp"
+                app:layout_constraintStart_toStartOf="@id/recognition"
+                app:layout_constraintTop_toBottomOf="@id/recognition"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_instagram"
+        android:id="@+id/iv_instagram"
+        android:layout_marginBottom="@dimen/margin_60dp"
+        android:paddingRight="@dimen/margin_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_facebook"
+        app:layout_constraintBottom_toTopOf="@id/iv_instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_facebook"
+        android:paddingRight="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_10dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_twitter"
+        app:layout_constraintBottom_toTopOf="@id/iv_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_twitter"
+        android:paddingRight="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_google"
+        app:layout_constraintBottom_toTopOf="@id/iv_twitter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_google"
+        android:paddingRight="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

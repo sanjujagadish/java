@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <group
+        android:checkableBehavior="single">
+
+      <group
+        android:id="@+id/nav_div1">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="MyProfile" />
+      </group>
+
+        <group android:id="@+id/div4">
+
+            <item
+                android:id="@+id/nav_contactus"
+                android:icon="@drawable/ic_phone_iphone_black_24dp"
+                android:title="Contact Us" />
+        </group>
+
+        <group android:id="@+id/div5">
+
+            <item
+                android:id="@+id/nav_aboutus"
+                android:icon="@drawable/ic_people_black_24dp"
+                android:title="About Us" />
+        </group>
+
+        <group android:id="@+id/div6">
+
+            <item
+                android:id="@+id/nav_terms"
+                android:icon="@drawable/ic_assignment_black_24dp"
+                android:title="Terms and Conditions" />
+        </group>
+
+        <group android:id="@+id/div7">
+
+            <item
+                android:id="@+id/nav_policy"
+                android:icon="@drawable/ic_event_note_black_24dp"
+                android:title="Privacy Policy" />
+        </group>
+
+        <group android:id="@+id/div10">
+
+           <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:title="Logout" />
+         </group>
+    </group>
+
+</menu>

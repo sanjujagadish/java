@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".navigationview.contactus.ContactUsFragment" >
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_50dp">
+
+    <ImageView
+        android:layout_width="@dimen/margin_200dp"
+        android:layout_height="@dimen/margin_50dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/img_banner"
+        android:src="@drawable/tagslogo" />
+
+    <TextView
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/img_banner"
+        app:layout_constraintTop_toBottomOf="@id/img_banner"
+        android:id="@+id/partner"
+        android:layout_marginRight="@dimen/margin_12dp"
+        android:textStyle="bold"
+        android:text="Partner"
+        android:textColor="@color/quantum_pink400"
+        android:textSize="@dimen/textsize_14sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100dp"
+        android:layout_marginTop="@dimen/margin_40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_banner"
+        android:textSize="@dimen/textsize_20sp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:id="@+id/image"
+        android:scaleType="fitXY"
+        android:src="@drawable/contactus_banner"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lets_get_in_touch"
+        android:gravity="center"
+        android:id="@+id/get"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:textSize="@dimen/textsize_20sp"
+        android:textColor="@color/quantum_grey900"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:id="@+id/et_name"
+        android:textSize="@dimen/textsize_15sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toBottomOf="@+id/get"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/edittext_stylechange"
+        android:textColorHighlight="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/padding_16dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:hint="@string/hint_name"
+        android:textColorHint="@color/quantum_grey800" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:id="@+id/et_phone"
+        android:textSize="@dimen/textsize_15sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/edittext_stylechange"
+        android:textColorHighlight="@color/colorPrimary"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/padding_16dp"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:hint="@string/hint_phone"
+        android:textColorHint="@color/quantum_grey800" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_100dp"
+        android:id="@+id/et_message"
+        android:textSize="@dimen/textsize_14sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/edittext_stylechange"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:drawablePadding="@dimen/margin_16dp"
+        android:paddingLeft="@dimen/margin_16dp"
+        android:paddingRight="@dimen/padding_16dp"
+        android:drawableTint="#95989A"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:hint="@string/send_us_a_message"
+        android:textColorHint="@color/quantum_grey800" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_45dp"
+        android:layout_marginRight="@dimen/margin_16dp"
+        android:layout_marginLeft="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:id="@+id/btn_contact"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/et_message"
+        android:text="@string/contactus"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textsize_16sp"
+        android:background="@drawable/rectangle_shape_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".qrcode.QrcodeFragment">
+
+<include layout="@layout/layout_appboard"
+    android:id="@+id/appboard"/>
+
+    <com.tag.app.tagnearemployee.qrcode.QrCode.CameraSourcePreview
+        android:id="@+id/qr_preview"
+        android:layout_below="@id/appboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appboard"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/scannerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/fuqc_blue_box"
+                android:layout_width="256dp"
+                android:layout_height="207dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:elevation="1dp"
+                android:src="@drawable/scanning" />
+
+
+            <com.tag.app.tagnearemployee.qrcode.QrCode.ScannerOverlay
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="#44000000"
+                app:line_color="@color/colorAccent"
+                app:line_speed="6"
+                app:line_width="4"
+                app:square_height="250"
+                app:square_width="310"
+                android:layout_width="match_parent" />
+
+            <View
+                style="@style/ScanQRCodeTranslucentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/fuqc_blue_box" />
+
+            <View
+                style="@style/ScanQRCodeTranslucentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/fuqc_blue_box" />
+
+            <View
+                style="@style/ScanQRCodeTranslucentView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/fuqc_blue_box"
+                android:layout_alignTop="@id/fuqc_blue_box"
+                android:layout_toLeftOf="@id/fuqc_blue_box" />
+
+            <View
+                style="@style/ScanQRCodeTranslucentView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/fuqc_blue_box"
+                android:layout_alignTop="@id/fuqc_blue_box"
+                android:layout_toRightOf="@id/fuqc_blue_box" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
